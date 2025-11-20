@@ -1,52 +1,111 @@
 import React from "react";
 
-// Placeholder for Main Website Content
-function MainWebsite() {
-  return (
-    <div style={{
-      padding: "40px",
-      maxWidth: "700px",
-      margin: "60px auto",
-      background: "#fff",
-      borderRadius: "10px",
-      boxShadow: "0 2px 10px rgba(0,0,0,0.07)",
-      fontFamily: "Arial, sans-serif",
-    }}>
-      <h1 style={{ color: "#007bff", marginBottom: "16px" }}>Welcome to Maghanim Medical!</h1>
-      <p>
-        Maghanim Medical is your trusted platform for up-to-date medical packages, solutions, and health insights.
-        Browse our services, learn about the latest advancements, and connect with professionals.
-      </p>
-      <ul>
-        <li>💊 Medical Packages</li>
-        <li>🩺 Health Services</li>
-        <li>📢 Latest News & Updates</li>
-        <li>📞 Contact Support</li>
-      </ul>
-      <button
-        style={{
-          marginTop: "28px",
-          padding: "12px 30px",
-          fontSize: "16px",
-          border: "none",
-          borderRadius: "5px",
-          backgroundColor: "#28a745",
-          color: "#fff",
-          cursor: "pointer",
-        }}
-        onClick={() => window.open("mailto:support@maghanimmedical.com")}
-      >
-        Contact Us
-      </button>
-    </div>
-  );
-}
+
 
 function App() {
-  // Display main site instead of update notice!
+
+  const message = "A new update is available. Your current package version is outdated. Please update to the latest version for the best performance.";
+
+
+
+  const containerStyle = {
+
+    display: "flex",
+
+    justifyContent: "center",
+
+    alignItems: "center",
+
+    height: "100vh",
+
+    backgroundColor: "#f8f9fa",
+
+    fontFamily: "Arial, sans-serif",
+
+  };
+
+
+
+  const boxStyle = {
+
+    backgroundColor: "#fff3cd",
+
+    color: "#856404",
+
+    padding: "20px 30px",
+
+    borderRadius: "8px",
+
+    border: "1px solid #ffeeba",
+
+    boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
+
+    textAlign: "center",
+
+    maxWidth: "500px",
+
+  };
+
+
+
+  const titleStyle = {
+
+    fontSize: "20px",
+
+    fontWeight: "bold",
+
+    marginBottom: "10px",
+
+  };
+
+
+
+  const buttonStyle = {
+
+    marginTop: "15px",
+
+    padding: "10px 20px",
+
+    border: "none",
+
+    borderRadius: "5px",
+
+    backgroundColor: "#007bff",
+
+    color: "white",
+
+    cursor: "pointer",
+
+    fontSize: "15px",
+
+  };
+
+
+
   return (
-    <MainWebsite />
+
+    <div style={containerStyle}>
+
+      <div style={boxStyle}>
+
+        <div style={titleStyle}>⚠️ System Update Required</div>
+
+        <p>{message}</p>
+
+        <button style={buttonStyle} onClick={() => alert("Updating packages...")}>
+
+          Update Now
+
+        </button>
+
+      </div>
+
+    </div>
+
   );
+
 }
+
+
 
 export default App;
